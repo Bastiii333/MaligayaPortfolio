@@ -1,0 +1,134 @@
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(6, 9, 15, 0.75);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.project-modal {
+  width: min(1080px, 96vw);
+  max-height: 92vh;
+  border: 1px solid #2f3642;
+  border-radius: 14px;
+  background: #0f141c;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  position: relative;
+}
+
+.project-modal-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333b49;
+  border-radius: 50%;
+  background: #131a24;
+  color: #dce3ef;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.project-modal-header {
+  padding: 20px 56px 14px 24px;
+  border-bottom: 1px solid #242c38;
+}
+
+.project-modal-header p {
+  color: #8f97a5;
+  font-size: 0.72rem;
+  margin-bottom: 6px;
+}
+
+.project-modal-header h3 {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.8vw, 1.5rem);
+}
+
+.project-modal-media {
+  padding: 16px;
+  max-height: calc(92vh - 96px);
+  overflow: auto;
+}
+
+.project-modal-media img,
+.project-modal-media video {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #2a3240;
+  display: block;
+  background: #070b10;
+}
+
+.modal-slide-controls {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.slide-btn {
+  border: 1px solid #2f3746;
+  background: #141c29;
+  color: #d4dbe7;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.modal-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.modal-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.modal-dots .dot.active {
+  background: #ffffff;
+}
+
+.modal-fallback {
+  min-height: 220px;
+  border: 1px dashed #334156;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #8f99ab;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .project-modal-overlay {
+    padding: 10px;
+  }
+
+  .project-modal {
+    width: 100%;
+    max-height: 95vh;
+  }
+
+  .project-modal-header {
+    padding: 16px 46px 12px 14px;
+  }
+
+  .project-modal-media {
+    padding: 10px;
+  }
+
+  .modal-slide-controls {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,59 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+}
+
+.about-copy {
+  max-width: 650px;
+  color: #5d626d;
+  font-size: 1.05rem;
+}
+
+.about-copy p + p {
+  margin-top: 18px;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 45px;
+  padding-top: 22px;
+  border-top: 1px solid #d8dae0;
+}
+
+.about-facts div {
+  display: grid;
+  gap: 3px;
+  transition: transform 0.2s var(--ease);
+}
+
+.about-facts div:hover {
+  transform: translateY(-3px);
+}
+
+.about-facts span {
+  font-size: 0.72rem;
+  color: #8a8f99;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-facts strong {
+  font: 700 0.9rem "Space Grotesk";
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-facts {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

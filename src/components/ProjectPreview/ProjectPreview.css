@@ -1,0 +1,297 @@
+.preview-browser {
+  position: absolute;
+  inset: 58px 9% -50px;
+  border: 1px solid #303642;
+  border-radius: 18px 18px 0 0;
+  background: #0c0f15;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.preview-top {
+  height: 30px;
+  border-bottom: 1px solid #242a35;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.preview-top i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #525967;
+}
+
+.video-preview-wrap {
+  height: calc(100% - 30px);
+  background: #07090d;
+}
+
+.video-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slideshow-wrap {
+  position: relative;
+  height: calc(100% - 30px);
+  background: #07090d;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slideshow-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.dot.active {
+  background: #fff;
+}
+
+
+.loan-ui {
+  padding: 25px 32px;
+}
+
+.loan-nav {
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background: #222833;
+  margin-bottom: 45px;
+}
+
+.loan-hero {
+  display: grid;
+  gap: 9px;
+  width: 55%;
+}
+
+.loan-hero small {
+  color: #8b7aff;
+  font-size: 0.45rem;
+}
+
+.loan-hero b {
+  font: 700 1.7rem "Space Grotesk";
+}
+
+.loan-hero span {
+  display: block;
+  width: 150px;
+  height: 6px;
+  border-radius: 5px;
+  background: #252c38;
+}
+
+.loan-form {
+  position: absolute;
+  right: 8%;
+  top: 100px;
+  width: 32%;
+  padding: 16px;
+  border-radius: 10px;
+  background: #171c26;
+}
+
+.loan-form i {
+  display: block;
+  height: 12px;
+  border-radius: 4px;
+  background: #242b37;
+  margin-bottom: 9px;
+}
+
+.loan-form i:last-child {
+  height: 35px;
+  background: #6958e8;
+}
+
+.dash-ui {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  position: absolute;
+  inset: 55px 9% 0;
+  border: 1px solid #303642;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  background: #0c0f15;
+}
+
+.dash-ui aside {
+  border-right: 1px solid #252b35;
+  padding: 18px 10px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.dash-ui aside b {
+  font: 700 0.55rem "Space Grotesk";
+  color: #8c7cff;
+  margin-bottom: 10px;
+}
+
+.dash-ui aside span {
+  height: 6px;
+  border-radius: 5px;
+  background: #252c37;
+}
+
+.dash-main {
+  padding: 25px;
+}
+
+.dash-title {
+  width: 130px;
+  height: 12px;
+  border-radius: 5px;
+  background: #e4e7ed;
+  margin-bottom: 25px;
+}
+
+.dash-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.dash-cards i {
+  height: 55px;
+  border: 1px solid #272e3a;
+  border-radius: 8px;
+  background: #141923;
+}
+
+.dash-table {
+  margin-top: 15px;
+  border: 1px solid #272e3a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dash-table i {
+  display: block;
+  height: 26px;
+  border-bottom: 1px solid #222934;
+}
+
+.pc-ui,
+.site-ui {
+  position: absolute;
+  inset: 55px 12% 0;
+  padding: 25px;
+  border: 1px solid #303642;
+  border-radius: 15px 15px 0 0;
+  background: #11151c;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  font: 700 0.6rem "Space Grotesk";
+  color: #e9ecf3;
+}
+
+.pc-header small {
+  color: #78d8ad;
+}
+
+.pc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.pc-grid div {
+  padding: 15px;
+  border: 1px solid #272e3a;
+  border-radius: 9px;
+  display: grid;
+  gap: 5px;
+}
+
+.pc-grid b {
+  color: #777f8e;
+  font-size: 0.55rem;
+}
+
+.pc-grid span {
+  font-size: 0.68rem;
+}
+
+.pc-total {
+  margin-top: 15px;
+  color: #777f8e;
+  font-size: 0.58rem;
+}
+
+.pc-total strong {
+  float: right;
+  color: #fff;
+}
+
+.site-nav span {
+  width: 120px;
+  height: 6px;
+  border-radius: 4px;
+  background: #272e38;
+}
+
+.site-body {
+  margin-top: 65px;
+  display: grid;
+  gap: 10px;
+}
+
+.site-body small {
+  color: #8b7aff;
+  font-size: 0.45rem;
+}
+
+.site-body b {
+  font: 700 1.5rem "Space Grotesk";
+}
+
+.site-body i {
+  width: 160px;
+  height: 7px;
+  border-radius: 5px;
+  background: #252c36;
+}
+
+@media (max-width: 680px) {
+  .preview-browser,
+  .dash-ui,
+  .pc-ui,
+  .site-ui {
+    left: 5%;
+    right: 5%;
+  }
+}
