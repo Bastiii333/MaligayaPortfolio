@@ -13,7 +13,11 @@ export default function ProjectCard({
   githubUrl = "#",
   featured = false,
   onSelect,
+  onLivePreviewUnavailable,
 }) {
+  const hasLivePreview = liveUrl && liveUrl !== "#";
+  const hasSourcePreview = githubUrl && githubUrl !== "#";
+
   return (
     <article
       className={`project-card ${featured ? "project-featured" : ""}`}
@@ -54,7 +58,14 @@ export default function ProjectCard({
               href={liveUrl}
               target="_blank"
               rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+
+                if (!hasLivePreview) {
+                  event.preventDefault();
+                  onLivePreviewUnavailable?.();
+                }
+              }}
             >
               Live preview <span>↗</span>
             </a>
@@ -62,7 +73,14 @@ export default function ProjectCard({
               href={githubUrl}
               target="_blank"
               rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
+              onClick={(event) => {
+                event.stopPropagation();
+
+                if (!hasSourcePreview) {
+                  event.preventDefault();
+                  onLivePreviewUnavailable?.();
+                }
+              }}
             >
               Source code <span>↗</span>
             </a>

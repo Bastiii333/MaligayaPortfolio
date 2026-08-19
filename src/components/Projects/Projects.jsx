@@ -3,11 +3,13 @@ import { useState } from "react";
 
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ProjectMediaModal from "../ProjectMediaModal/ProjectMediaModal";
+import UnavailablePreviewModal from "../UnavailablePreviewModal/UnavailablePreviewModal";
 import Reveal from "../Reveal/Reveal";
 
 
 export default function Projects({ projects = [] }) {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [unavailableProject, setUnavailableProject] = useState(null);
 
 
 
@@ -23,7 +25,7 @@ export default function Projects({ projects = [] }) {
           </div>
 
           <p className="section-intro">
-            A selection of web, dashboard, and backend work.
+            A selection of web, dashboard, CRM, and backend work.
           </p>
         </Reveal>
 
@@ -38,6 +40,7 @@ export default function Projects({ projects = [] }) {
               <ProjectCard
                 {...project}
                 onSelect={() => setSelectedProject(project)}
+                onLivePreviewUnavailable={() => setUnavailableProject(project)}
               />
             </Reveal>
           ))}
@@ -46,6 +49,10 @@ export default function Projects({ projects = [] }) {
         <ProjectMediaModal
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
+        />
+        <UnavailablePreviewModal
+          project={unavailableProject}
+          onClose={() => setUnavailableProject(null)}
         />
       </div>
     </section>
