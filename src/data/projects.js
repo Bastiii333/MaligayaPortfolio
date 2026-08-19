@@ -11,7 +11,7 @@ export const projects = [
     featured: true,
     preview: "pcplanner",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/aziel123-de/PC-PLANNER-CAPSTONE-"
   },
   {
     id: 2,
