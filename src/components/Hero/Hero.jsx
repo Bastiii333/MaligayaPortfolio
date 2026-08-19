@@ -29,7 +29,7 @@ export default function Hero() {
 
           <p className="hero-description">
             I&apos;m Sebastian Maligaya, an IT graduate focused on building clean
-            websites, practical dashboards, CRM integrations, and
+            websites and
             backend-powered applications.
           </p>
 
