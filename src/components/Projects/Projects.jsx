@@ -25,7 +25,7 @@ export default function Projects({ projects = [] }) {
           </div>
 
           <p className="section-intro">
-            A selection of web, dashboard, CRM, and backend work.
+            A selection of web, dashboard, and backend work.
           </p>
         </Reveal>
 
