@@ -3,9 +3,8 @@ import { useState } from "react";
 
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ProjectMediaModal from "../ProjectMediaModal/ProjectMediaModal";
-import UnavailablePreviewModal from "../UnavailablePreviewModal/UnavailablePreviewModal";
-import Reveal from "../Reveal/Reveal";
-
+import UnavailablePreviewModal from "../../UnavailablePreviewModal/UnavailablePreviewModal";
+import Reveal from "../../Reveal/Reveal";
 
 export default function Projects({ projects = [] }) {
   const [selectedProject, setSelectedProject] = useState(null);
